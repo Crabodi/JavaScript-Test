@@ -1,19 +1,25 @@
 'use strict';
 
+let money = prompt("Ваш бюджет на месяц?","0"),
+    time = prompt("Введите дату в формате YYY-MM-DD","2019-04-05");
 
-// var leftBorderWidth = 1;
-// let second = 2;
-// const pi = 3.14;
+let Dannye = {
+    Budget : money,
+    timeData : time,
+    expenses : {},
+    optionalExpenses : {},
+    income : {},
+    savings : false
+}
 
-// console.log(second);
+Dannye.expenses[0]= prompt("Введите обязательную статью расходов в этом месяце?","")+" : ";
+let temp=prompt("Во сколько это обойдется?","0");
+Dannye.expenses[0]= Dannye.expenses[0]+ temp;
+money=money-temp;
+Dannye.expenses[1]= prompt("Введите обязательную статью расходов в этом месяце?","")+" : ";
+temp=prompt("Во сколько это обойдется?","0");
+Dannye.expenses[1]= Dannye.expenses[0]+ temp;
+money=money-temp;
 
+alert("Ваш бюджет на 1 день "+money/30);
 
-// let answer = confirm("What a fuck");
-// console.log(answer);
-
-let incr = 10,
-    decr = 10;
-
-
-console.log(incr++);
-console.log(--decr);
